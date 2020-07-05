@@ -32,6 +32,7 @@ Visit our [website] for audio samples using our published [Tacotron 2] and
 ## Training
 1. `python train.py --output_directory=outdir --log_directory=logdir`
 2. (OPTIONAL) `tensorboard --logdir=outdir/logdir`
+3. [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dedkoster/tacotron2/blob/master/train.ipynb)
 
 ## Training using a pre-trained model
 Training using a pre-trained model can lead to faster convergence  
