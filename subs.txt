@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "train.py", line 290, in <module>
+    args.warm_start, args.n_gpus, args.rank, args.group_name, hparams)
+  File "train.py", line 215, in train
+    y_pred = model(x)
+  File "/usr/local/lib/python3.6/dist-packages/torch/nn/modules/module.py", line 550, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/content/tacotron2/model.py", line 505, in forward
+    encoder_outputs = self.encoder(embedded_inputs, text_lengths)
+  File "/usr/local/lib/python3.6/dist-packages/torch/nn/modules/module.py", line 550, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/content/tacotron2/model.py", line 182, in forward
+    x, input_lengths, batch_first=True)
+  File "/usr/local/lib/python3.6/dist-packages/torch/nn/utils/rnn.py", line 244, in pack_padded_sequence
+    _VF._pack_padded_sequence(input, lengths, batch_first)
+RuntimeError: Length of all samples has to be greater than 0, but found an element in 'lengths' that is <= 0
