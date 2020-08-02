@@ -178,7 +178,6 @@ class Encoder(nn.Module):
 
         # pytorch tensor are not reversible, hence the conversion
         input_lengths = input_lengths.cpu().numpy()
-        print("input lengths", len(input_lengths))
         x = nn.utils.rnn.pack_padded_sequence(
             x, input_lengths, batch_first=True)
 
@@ -502,6 +501,7 @@ class Tacotron2(nn.Module):
         text_lengths, output_lengths = text_lengths.data, output_lengths.data
 
         embedded_inputs = self.embedding(text_inputs).transpose(1, 2)
+        print(embedded_inputs)
 
         encoder_outputs = self.encoder(embedded_inputs, text_lengths)
 
